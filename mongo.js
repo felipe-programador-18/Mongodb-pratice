@@ -19,8 +19,15 @@ MongoClient.connect('mongodb://localhost:27017/intro-mongo', (err, db) => {
           console.log(doc)
       },() => console.log('end') ) */
 
-
-      
+      //THIS IS TO UPDATE DATABASE
+      //The method have three parameters to update
+      pessoas.update({
+          _id: mongodb.ObjetcID('62029720a78ce03150a9cf0b')
+      }, {
+          $set :{
+              name:'Felipe Martins'
+          }
+      }, (err, res) => console.log(err))
 
 })
       //, (err, res)=> {
