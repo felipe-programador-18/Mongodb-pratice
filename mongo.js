@@ -24,8 +24,9 @@ MongoClient.connect('mongodb://localhost:27017/intro-mongo', (err, db) => {
       pessoas.update({
           _id: mongodb.ObjetcID('62029720a78ce03150a9cf0b')
       }, {
-          $set :{
-              name:'Felipe Martins'
+          $set:{
+              nome:'Felipe Martins',
+              born:'1853-01-30'
           }
       }, (err, res) => console.log(err))
 
